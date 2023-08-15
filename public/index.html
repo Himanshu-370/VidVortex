@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Chat App</title>
+  </head>
+  <body>
+    <div>
+      <video
+        id="localVideo"
+        autoplay
+        muted
+        style="height: 300px; width: 400px"
+      ></video>
+      <video
+        id="remoteVideo"
+        autoplay
+        style="height: 300px; width: 400px"
+      ></video>
+    </div>
+
+    <ul id="messages"></ul>
+
+    <form id="send-form">
+      <input type="text" id="username" />
+      <input type="text" id="message" />
+      <button>Send</button>
+    </form>
+
+    <button id="join-button">Join Room</button>
+    <button id="create-button">Create Room</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
